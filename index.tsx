@@ -29,11 +29,11 @@ function Info() {
             <UpdatingComponent />
             <p>
                 You can view the source code for this page at:&nbsp;
-                <a href="https://github.com/opennetwork/vdom-react-example/blob/main/index.tsx">github.com/opennetwork/vdom-react-example/blob/main/index.tsx</a>
+                <a href="https://github.com/opennetwork/vdom-react-example/blob/main/index.tsx" target="_blank">github.com/opennetwork/vdom-react-example/blob/main/index.tsx</a>
             </p>
             <p>
                 The page was rendered with:&nbsp;
-                <a href="https://github.com/opennetwork/vdom-react">github.com/opennetwork/vdom-react</a>
+                <a href="https://github.com/opennetwork/vdom-react" target="_blank">github.com/opennetwork/vdom-react</a>
             </p>
             <p>
                 vdom-react in real time translates react components to vdom compatible DOM nodes<br />
@@ -41,11 +41,11 @@ function Info() {
             </p>
             <p>
                 You can see the implementation for vdom at:&nbsp;
-                <a href="https://github.com/opennetwork/vdom">github.com/opennetwork/vdom</a>
+                <a href="https://github.com/opennetwork/vdom" target="_blank">github.com/opennetwork/vdom</a>
             </p>
             <p>
                 Or the source for vnode at:&nbsp;
-                <a href="https://github.com/opennetwork/vnode/blob/main/src/create-node.ts#L45">github.com/opennetwork/vnode</a>
+                <a href="https://github.com/opennetwork/vnode/blob/main/src/create-node.ts#L45" target="_blank">github.com/opennetwork/vnode</a>
             </p>
         </>
     )
