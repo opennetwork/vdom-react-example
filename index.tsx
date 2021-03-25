@@ -5,6 +5,12 @@ import { Fragment } from "@opennetwork/vnode";
 
 window.setImmediate = window.setImmediate || setTimeout;
 
+async function UpdatingComponent() {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    const todos = await response.json();
+    return <pre>{JSON.stringify(todos, undefined, "  ")}</pre>
+}
+
 function Info() {
     return (
         <>
@@ -16,6 +22,11 @@ function Info() {
                 components that utilise hooks, like this button component:
             </p>
             <WithButton />
+            <p>
+                It is safe to utilise an async component when it does not utilise any hooks.<br />
+                This component below fetches from an external API:
+            </p>
+            <UpdatingComponent />
             <p>
                 You can view the source code for this page at:&nbsp;
                 <a href="https://github.com/opennetwork/vdom-react-example/blob/main/index.tsx">github.com/opennetwork/vdom-react-example/blob/main/index.tsx</a>

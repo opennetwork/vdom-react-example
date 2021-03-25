@@ -13,10 +13,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@opennetwork/progressive-merge@^4.0.6":
-  version "4.0.6"
-  resolved "https://registry.npmjs.org/@opennetwork/progressive-merge/-/progressive-merge-4.0.6.tgz#e9818f6aadc504a3dae5aafa81dade04eb10c855"
-  integrity sha512-B3KH3GSol2xiBEc7/g5hGZ8rdylNntVb3S8MfmOBYoLwOQtYUOHm+uMRMFba+Qrc9pLptYaf6gt43V5Y0uYGEQ==
+"@opennetwork/progressive-merge@^4.0.7":
+  version "4.0.7"
+  resolved "https://registry.npmjs.org/@opennetwork/progressive-merge/-/progressive-merge-4.0.7.tgz#5bf8c566e28a465df64c6bb04ad40edb0a6a2b16"
+  integrity sha512-TRobTot1TgzxgJD9hsfhqvTq/x/Ka7OPIfj9u6GX0vVZAOMhk0Ck++rMzq1SFoAk2EOwfsxAcnNafbum+4UK6Q==
 
 "@opennetwork/vdom-react@^1.2.1":
   version "1.2.1"
