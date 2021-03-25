@@ -1,0 +1,28 @@
+{
+  "name": "@opennetwork/vdom-react-example",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"This template does not include a test runner by default.\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.21",
+    "@types/node": "^14.14.35",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "snowpack": "^3.0.1",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@opennetwork/progressive-merge": "^4.0.4",
+    "@opennetwork/vdom": "^8.3.2",
+    "@opennetwork/vdom-react": "^1.2.1",
+    "@opennetwork/vnode": "^18.1.2",
+    "iterable": "^5.7.0",
+    "microtask-collector": "^1.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
