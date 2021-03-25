@@ -18,10 +18,10 @@
   resolved "https://registry.npmjs.org/@opennetwork/progressive-merge/-/progressive-merge-4.0.7.tgz#5bf8c566e28a465df64c6bb04ad40edb0a6a2b16"
   integrity sha512-TRobTot1TgzxgJD9hsfhqvTq/x/Ka7OPIfj9u6GX0vVZAOMhk0Ck++rMzq1SFoAk2EOwfsxAcnNafbum+4UK6Q==
 
-"@opennetwork/vdom-react@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/@opennetwork/vdom-react/-/vdom-react-1.2.1.tgz#4428505f8085ca700c35022c15e659b7079a8a18"
-  integrity sha512-ZOxajh9xCRqvD4Jrr9rqF/+VB65LcZBj5fN8+Ywf54klznW0h753QayHNRdCTf+sEh79+g0WmOJlTuP/H4mLVA==
+"@opennetwork/vdom-react@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/@opennetwork/vdom-react/-/vdom-react-1.2.2.tgz#58e2d082e8b8959cbfe582776607fd5bb9ad0102"
+  integrity sha512-MQU75ES3jBuenUOST/KVtMMhMRWETTbrbfOa+VfIUOYMkoHhPYgtOJIQkeWN2rm5tea7TR7TV4V8Gh137ggXYQ==
   dependencies:
     "@opennetwork/vdom" "^8.3.2"
     "@opennetwork/vnode-hooks" "^6.0.0"
