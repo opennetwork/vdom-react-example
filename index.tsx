@@ -18,7 +18,7 @@ function Info() {
             <p>You are currently viewing a page that was built using React</p>
             <p>However, there is a twist, it is rendered using a completely async renderer</p>
             <p>
-                Currently the renderer has support for react function
+                Currently the intermediate react renderer has support for react function
                 components that utilise hooks, like this button component:
             </p>
             <WithButton />
