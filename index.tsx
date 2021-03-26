@@ -1,14 +1,52 @@
-import React, {useCallback, useEffect, useReducer, useRef, useState} from "react";
+import React, {useCallback, useEffect, useMemo, useReducer, useRef, useState} from "react";
 import { render, DOMVContext } from "@opennetwork/vdom";
 import { React as ReactWrapper } from "@opennetwork/vdom-react";
 import { Fragment } from "@opennetwork/vnode";
 
 window.setImmediate = window.setImmediate || setTimeout;
 
+function useAsync<T>(fn: () => Promise<T>, deps?: unknown[]): T {
+    const [loaded, setLoaded] = useState(false);
+    const [value, setValue] = useState<T | undefined>(undefined);
+    const [error, setError] = useState(undefined);
+    const externalPromise = useMemo(fn, deps);
+    const promise = useMemo(async () => {
+        setLoaded(false);
+        setValue(undefined);
+        setError(undefined);
+        try {
+            const value = await externalPromise;
+            setValue(value);
+            setLoaded(true);
+        } catch (error) {
+            setError(error);
+        }
+    }, [externalPromise, setLoaded, setValue, setError]);
+
+    if (error) throw error;
+    if (!loaded) throw promise;
+    assertValueT(value);
+    return value;
+
+    function assertValueT(input: unknown): asserts input is T {
+        if (!loaded || input !== value) {
+            throw new Error("Expected loaded value");
+        }
+    }
+}
+
 async function UpdatingComponent() {
     const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
     const todos = await response.json();
     return <pre>{JSON.stringify(todos, undefined, "  ")}</pre>
+}
+
+function SuspendedComponent() {
+    const users = useAsync(async () => {
+        const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+        return await response.json();
+    }, []);
+    return <pre>{JSON.stringify(users, undefined, "  ")}</pre>
 }
 
 function Info() {
@@ -28,6 +66,11 @@ function Info() {
             </p>
             <UpdatingComponent />
             <p>
+                You can throw promises like react suspense.<br />
+                The component below fetches from an external API using a thrown error:
+            </p>
+            <SuspendedComponent />
+            <p>
                 You can view the source code for this page at:&nbsp;
                 <a href="https://github.com/opennetwork/vdom-react-example/blob/main/index.tsx" target="_blank">github.com/opennetwork/vdom-react-example/blob/main/index.tsx</a>
             </p>
@@ -45,7 +88,7 @@ function Info() {
             </p>
             <p>
                 Or the source for vnode at:&nbsp;
-                <a href="https://github.com/opennetwork/vnode/blob/main/src/create-node.ts#L45" target="_blank">github.com/opennetwork/vnode</a>
+                <a href="https://github.com/opennetwork/vnode/blob/main/src/create-node.ts#L45">github.com/opennetwork/vnode</a>
             </p>
         </>
     )
