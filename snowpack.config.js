@@ -23,4 +23,7 @@ module.exports = {
   buildOptions: {
     /* ... */
   },
+  env: {
+    RENDER_REACT: undefined
+  }
 };

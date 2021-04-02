@@ -1,9 +1,8 @@
-import React, {useCallback, useEffect, useMemo, useReducer, useRef, useState} from "react";
+import React, {Suspense, useCallback, useEffect, useMemo, useReducer, useRef, useState} from "react";
 import { render, DOMVContext } from "@opennetwork/vdom";
 import { React as ReactWrapper } from "@opennetwork/vdom-react";
 import { Fragment } from "@opennetwork/vnode";
-
-window.setImmediate = window.setImmediate || setTimeout;
+import { render as reactRender } from "react-dom";
 
 function useAsync<T>(fn: () => Promise<T>, deps?: unknown[]): T {
     const [loaded, setLoaded] = useState(false);
@@ -60,16 +59,22 @@ function Info() {
                 components that utilise hooks, like this button component:
             </p>
             <WithButton />
-            <p>
-                It is safe to utilise an async component when it does not utilise any hooks.<br />
-                This component below fetches from an external API:
-            </p>
-            <UpdatingComponent />
-            <p>
-                You can throw promises like react suspense.<br />
-                The component below fetches from an external API using a thrown error:
-            </p>
-            <SuspendedComponent />
+            {
+                !import.meta.env.RENDER_REACT ? (
+                    <>
+                        <p>
+                            It is safe to utilise an async component when it does not utilise any hooks.<br />
+                            This component below fetches from an external API:
+                        </p>
+                        <UpdatingComponent />
+                        <p>
+                            You can throw promises like react suspense.<br />
+                            The component below fetches from an external API using a thrown error:
+                        </p>
+                        <SuspendedComponent />
+                    </>
+                ) : undefined
+            }
             <p>
                 You can view the source code for this page at:&nbsp;
                 <a href="https://github.com/opennetwork/vdom-react-example/blob/main/index.tsx" target="_blank">github.com/opennetwork/vdom-react-example/blob/main/index.tsx</a>
@@ -125,18 +130,24 @@ if (!root) {
     throw new Error("Expected root");
 }
 
-const context = new DOMVContext({
-    root
-});
+if (import.meta.env.RENDER_REACT) {
+    reactRender(<Suspense fallback={<p>Loading</p>}><App /></Suspense> , root);
+} else {
 
-await render(
-    ReactWrapper(
-        {},
-        {
-            source: App,
-            options: {},
-            reference: Fragment
-        }
-    ),
-    context
-);
+    const context = new DOMVContext({
+        root
+    });
+
+    await render(
+        ReactWrapper(
+            {},
+            {
+                source: App,
+                options: {},
+                reference: Fragment
+            }
+        ),
+        context
+    );
+
+}

@@ -18,30 +18,23 @@
   resolved "https://registry.npmjs.org/@opennetwork/progressive-merge/-/progressive-merge-5.0.1.tgz#52380eeeceea38883baf472cd2de6278049a077a"
   integrity sha512-Cs5u9yIvH9tmMuqLcPH9bhX6r0OWh/DN/FEFjQffd1Cka6GDX9JEXosFTKb3a5iqouSj9USBlzJacL13MdQlvw==
 
-"@opennetwork/vdom-react@^1.2.9":
-  version "1.2.9"
-  resolved "https://registry.npmjs.org/@opennetwork/vdom-react/-/vdom-react-1.2.9.tgz#1d144b23bd0bca909ca20e06e9b9b9978be6e1b5"
-  integrity sha512-xEoJE8Tio8okaFMMFFZu/dSc2JZ4eJi+U5jlgPLuA7VhfjskGqrma3eEVWU32LiqYYSk+2hMVot9rWPBKc9dow==
+"@opennetwork/vdom-react@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@opennetwork/vdom-react/-/vdom-react-2.0.0.tgz#a90e0636764a0afc737658f8d9c9a3a895ddaa89"
+  integrity sha512-Ma4B+qSmUgaUGJLV7REqHJ4LscnvTTQjZlJkqiHykNt/izQzBFEqTyosxD2+OgfKAGdIOxCwaCeg1Pj/GZ/G4A==
   dependencies:
-    "@opennetwork/vdom" "^8.3.2"
-    "@opennetwork/vnode-hooks" "^6.0.0"
     react "^17.0.2"
     react-reconciler "^0.26.2"
 
-"@opennetwork/vdom@^8.3.2":
-  version "8.3.2"
-  resolved "https://registry.npmjs.org/@opennetwork/vdom/-/vdom-8.3.2.tgz#8a84fc89adbb60849eeebcbc7a19ee47847c5a0c"
-  integrity sha512-fEGrGrWC5u/dnXDoBNYSyQrm2NZQZ/djQNoJjE+OG6zsMkbO1cPUWC/OwSCsMx5RrR0lhPjfg3G67wDH+sAoLg==
+"@opennetwork/vdom@^10.1.0":
+  version "10.1.0"
+  resolved "https://registry.npmjs.org/@opennetwork/vdom/-/vdom-10.1.0.tgz#4ed3bdd39809fda9b1de8de6fe5b0c4cb39b4c5a"
+  integrity sha512-sY2H7QQq+PE6c/Jf3TEZTjaKyPq2j5STXDhR1qC6fkkyQs8N6VTFPSgqk6m6DXDS5KpdOsgJnL4FbAH0qyFFlQ==
 
-"@opennetwork/vnode-hooks@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.npmjs.org/@opennetwork/vnode-hooks/-/vnode-hooks-6.0.0.tgz#6c49801ab4f992fe89637aebba6fbd0d5190439f"
-  integrity sha512-f293RTv4/nGD5bl/SLFMtOfxQDC4NvA2Xmk06GEHNHndPPP89/Q0aNBpzeUADSr6VeIp8IbkaebzRS3mU6elBg==
-
-"@opennetwork/vnode@^18.1.2":
-  version "18.1.2"
-  resolved "https://registry.npmjs.org/@opennetwork/vnode/-/vnode-18.1.2.tgz#6ac3841a4d67a99b799d7cf42f9ebd511df3092b"
-  integrity sha512-qiou8gtTtCLAl+W+Zy1RC2FozNZi1Sol8U3Gpcakm93sOczXgh/2d+UTHys81N1JbFw2FloVvBvyGRHNTY5obA==
+"@opennetwork/vnode@^19.0.0":
+  version "19.0.0"
+  resolved "https://registry.npmjs.org/@opennetwork/vnode/-/vnode-19.0.0.tgz#11c328ad5f78cf39d2b4284ff4f890c93cd7a600"
+  integrity sha512-DlcChvHIqfBTlfK1uPj1Qw3GFEGF5Pwh1HaiQqDRuk1BAQQv4rNGyNkEKLWxschNuUFT1ytC1rEnheukhliCkw==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.3"
