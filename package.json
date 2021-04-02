@@ -16,7 +16,7 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@opennetwork/progressive-merge": "^4.0.7",
+    "@opennetwork/progressive-merge": "^5.0.1",
     "@opennetwork/vdom": "^8.3.2",
     "@opennetwork/vdom-react": "^1.2.9",
     "@opennetwork/vnode": "^18.1.2",
