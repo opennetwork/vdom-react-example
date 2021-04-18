@@ -1,8 +1,7 @@
-import React, {Suspense, useCallback, useEffect, useMemo, useReducer, useRef, useState} from "react";
-import { render, DOMVContext } from "@opennetwork/vdom";
-import { React as ReactWrapper } from "@opennetwork/vdom-react";
-import { Fragment } from "@opennetwork/vnode";
+import { Suspense, useCallback, useEffect, useMemo, useReducer, useRef, useState  } from "react";
+import { render } from "@opennetwork/vdom-react";
 import { render as reactRender } from "react-dom";
+import * as React from "react";
 
 function useAsync<T>(fn: () => Promise<T>, deps?: unknown[]): T {
     const [loaded, setLoaded] = useState(false);
@@ -133,21 +132,9 @@ if (!root) {
 if (import.meta.env.RENDER_REACT) {
     reactRender(<Suspense fallback={<p>Loading</p>}><App /></Suspense> , root);
 } else {
-
-    const context = new DOMVContext({
-        root
-    });
-
     await render(
-        ReactWrapper(
-            {},
-            {
-                source: App,
-                options: {},
-                reference: Fragment
-            }
-        ),
-        context
+        <App />,
+        root
     );
 
 }

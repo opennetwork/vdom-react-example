@@ -13,28 +13,30 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@opennetwork/progressive-merge@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.npmjs.org/@opennetwork/progressive-merge/-/progressive-merge-5.0.1.tgz#52380eeeceea38883baf472cd2de6278049a077a"
-  integrity sha512-Cs5u9yIvH9tmMuqLcPH9bhX6r0OWh/DN/FEFjQffd1Cka6GDX9JEXosFTKb3a5iqouSj9USBlzJacL13MdQlvw==
+"@opennetwork/linked-list@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/@opennetwork/linked-list/-/linked-list-4.0.0.tgz#69e25d0b00387f00da91faea2a5b77897d920712"
+  integrity sha512-aMEXPA0y3FZd5IlPPNVLHf5jxwNE9bo6d+5OgCsqZhRilftUuaytEnAS+7ggjiPekAtVDFl2okYROqtL3f02+g==
 
-"@opennetwork/vdom-react@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/@opennetwork/vdom-react/-/vdom-react-2.0.0.tgz#a90e0636764a0afc737658f8d9c9a3a895ddaa89"
-  integrity sha512-Ma4B+qSmUgaUGJLV7REqHJ4LscnvTTQjZlJkqiHykNt/izQzBFEqTyosxD2+OgfKAGdIOxCwaCeg1Pj/GZ/G4A==
-  dependencies:
-    react "^17.0.2"
-    react-reconciler "^0.26.2"
+"@opennetwork/progressive-merge@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/@opennetwork/progressive-merge/-/progressive-merge-5.2.0.tgz#b9d349e2622726b0cf5b96209753f4c560489d35"
+  integrity sha512-87SEGCJnAxZtJzFc4HbeJMjYeeCriyTAVjccny7Eu68+3BhtBlU9cdOPsfnyvjFNF+NDpe+T0LKTV1ruKNJaRA==
 
-"@opennetwork/vdom@^10.1.0":
-  version "10.1.0"
-  resolved "https://registry.npmjs.org/@opennetwork/vdom/-/vdom-10.1.0.tgz#4ed3bdd39809fda9b1de8de6fe5b0c4cb39b4c5a"
-  integrity sha512-sY2H7QQq+PE6c/Jf3TEZTjaKyPq2j5STXDhR1qC6fkkyQs8N6VTFPSgqk6m6DXDS5KpdOsgJnL4FbAH0qyFFlQ==
+"@opennetwork/vdom-react@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/@opennetwork/vdom-react/-/vdom-react-5.0.0.tgz#36bf2e99d1ff53f13a42c316b6d95fba852fdc2c"
+  integrity sha512-ra+iRGZlQQ96YWu1MbQmFhAbywGKbLMMXyioHfUVvyH4vBrzXd2dWJPZ3hb6zSXH12viD1HUFfTQu0q8soLLMg==
 
-"@opennetwork/vnode@^19.0.0":
-  version "19.0.0"
-  resolved "https://registry.npmjs.org/@opennetwork/vnode/-/vnode-19.0.0.tgz#11c328ad5f78cf39d2b4284ff4f890c93cd7a600"
-  integrity sha512-DlcChvHIqfBTlfK1uPj1Qw3GFEGF5Pwh1HaiQqDRuk1BAQQv4rNGyNkEKLWxschNuUFT1ytC1rEnheukhliCkw==
+"@opennetwork/vdom@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.npmjs.org/@opennetwork/vdom/-/vdom-17.0.0.tgz#fb11c5470488fce3d8f42331c3df3ab325c799ee"
+  integrity sha512-HW+AuhnOS7RBcB8pvgwEX/WF9YQnpdXFpnI8UtgWLg6bNhwBFZuQ1vKxwW9g+HcbZrviB7q33a1BqEVP37U+lQ==
+
+"@opennetwork/vnode@^21.3.0":
+  version "21.3.0"
+  resolved "https://registry.npmjs.org/@opennetwork/vnode/-/vnode-21.3.0.tgz#8f92da51529f36b7ca27dc4213d4a104bda998a6"
+  integrity sha512-la9L2LcBLtHjUbDbYw+FlXHoJ+88UY3JxAUZmk4D8wdhwWf2RBSAaG1hb9MU66lJ1nypGTUIoau/bcy8c+KoTw==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.3"
@@ -257,10 +259,12 @@ loose-envify@^1.1.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-microtask-collector@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/microtask-collector/-/microtask-collector-1.0.4.tgz#c92751f5171d55477cae7b613435b735b326fdd3"
-  integrity sha512-j49//GFbQnRTZSrKgmgp5q1SAewmr9+ZQ4+Ta6jf7CS29Z8POqNrI99X3ztz1SZqFjr9kMzZQjy7+T1X33KgIA==
+microtask-collector@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/microtask-collector/-/microtask-collector-3.1.0.tgz#a2ab49c1d5ea436ecaed027373b8a19a53b84f79"
+  integrity sha512-hqriS8rmSdcrnyxY8c1yA7Zb1PKLEQxxm1A5d53ZzxaMSpOWbW98zdKnjtJU6BCSANCu5C3rfcyxldXcTUQS9w==
+  dependencies:
+    "@opennetwork/linked-list" "^4.0.0"
 
 object-assign@^4.1.1:
   version "4.1.1"
@@ -318,15 +322,6 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
-
-react-reconciler@^0.26.2:
-  version "0.26.2"
-  resolved "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.26.2.tgz#bbad0e2d1309423f76cf3c3309ac6c96e05e9d91"
-  integrity sha512-nK6kgY28HwrMNwDnMui3dvm3rCFjZrcGiuwLc5COUipBK5hWHLOxMJhSnSomirqWwjPBJKV1QcbkI0VJr7Gl1Q==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    scheduler "^0.20.2"
 
 react@^17.0.2:
   version "17.0.2"
