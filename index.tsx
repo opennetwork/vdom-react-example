@@ -58,12 +58,14 @@ function Info() {
             </p>
             <WithButton />
             {
+                /* @ts-ignore */
                 !import.meta.env.RENDER_REACT ? (
                     <>
                         <p>
                             It is safe to utilise an async component when it does not utilise any hooks.<br />
                             This component below fetches from an external API:
                         </p>
+                        {/* @ts-ignore */}
                         <UpdatingComponent />
                         <p>
                             You can throw promises like react suspense.<br />
@@ -128,10 +130,13 @@ if (!root) {
     throw new Error("Expected root");
 }
 
+/* @ts-ignore */
 if (import.meta.env.RENDER_REACT) {
+    /* @ts-ignore */
     const { render: reactRender } = await import("react-dom");
     reactRender(<Suspense fallback={<p>Loading</p>}><App /></Suspense> , root);
 } else {
+    /* @ts-ignore */
     await render(
         <App />,
         root
