@@ -1,6 +1,5 @@
 import { Suspense, useCallback, useEffect, useMemo, useReducer, useRef, useState  } from "react";
 import { render } from "@opennetwork/vdom-react";
-import { render as reactRender } from "react-dom";
 import * as React from "react";
 
 function useAsync<T>(fn: () => Promise<T>, deps?: unknown[]): T {
@@ -130,6 +129,7 @@ if (!root) {
 }
 
 if (import.meta.env.RENDER_REACT) {
+    const { render: reactRender } = await import("react-dom");
     reactRender(<Suspense fallback={<p>Loading</p>}><App /></Suspense> , root);
 } else {
     await render(
