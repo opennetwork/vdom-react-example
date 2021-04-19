@@ -18,7 +18,7 @@
   "dependencies": {
     "@opennetwork/progressive-merge": "^5.2.0",
     "@opennetwork/vdom": "^17.0.0",
-    "@opennetwork/vdom-react": "^5.0.0",
+    "@opennetwork/vdom-react": "^5.0.1",
     "@opennetwork/vnode": "^21.3.0",
     "iterable": "^5.7.0",
     "microtask-collector": "^3.1.0",

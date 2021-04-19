@@ -23,10 +23,10 @@
   resolved "https://registry.npmjs.org/@opennetwork/progressive-merge/-/progressive-merge-5.2.0.tgz#b9d349e2622726b0cf5b96209753f4c560489d35"
   integrity sha512-87SEGCJnAxZtJzFc4HbeJMjYeeCriyTAVjccny7Eu68+3BhtBlU9cdOPsfnyvjFNF+NDpe+T0LKTV1ruKNJaRA==
 
-"@opennetwork/vdom-react@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/@opennetwork/vdom-react/-/vdom-react-5.0.0.tgz#36bf2e99d1ff53f13a42c316b6d95fba852fdc2c"
-  integrity sha512-ra+iRGZlQQ96YWu1MbQmFhAbywGKbLMMXyioHfUVvyH4vBrzXd2dWJPZ3hb6zSXH12viD1HUFfTQu0q8soLLMg==
+"@opennetwork/vdom-react@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/@opennetwork/vdom-react/-/vdom-react-5.0.1.tgz#3b67986eacef26c09bf580fc5ea95ac38d31d4c6"
+  integrity sha512-BcQP8iGmkphLLkksUc93F7I6Cd6eFByk8Pd9bEIdvpoOuzGYv661JUxNzwynKIX6SvS6q/sppwsmzB8mbs8SKw==
 
 "@opennetwork/vdom@^17.0.0":
   version "17.0.0"
