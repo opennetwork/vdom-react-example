@@ -124,22 +124,29 @@ function App() {
     )
 }
 
-const root = document.getElementById("root");
 
-if (!root) {
-    throw new Error("Expected root");
+async function run() {
+
+    const root = document.getElementById("root");
+
+    if (!root) {
+        throw new Error("Expected root");
+    }
+
+    /* @ts-ignore */
+    if (import.meta.env.RENDER_REACT) {
+        const { render: reactRender } = await import("react-dom");
+        reactRender(<Suspense fallback={<p>Loading</p>}><App /></Suspense> , root);
+    } else {
+        await render(
+            <App />,
+            root
+        );
+
+    }
 }
 
-/* @ts-ignore */
-if (import.meta.env.RENDER_REACT) {
-    /* @ts-ignore */
-    const { render: reactRender } = await import("react-dom");
-    reactRender(<Suspense fallback={<p>Loading</p>}><App /></Suspense> , root);
-} else {
-    /* @ts-ignore */
-    await render(
-        <App />,
-        root
-    );
+run().catch(error => {
+    throw error;
+});
 
-}
